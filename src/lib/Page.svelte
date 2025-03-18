@@ -1,6 +1,6 @@
 <script lang="ts">
-  import './page.css';
-  import Header from './Header.svelte';
+  import '$lib/page.css';
+  import Header from '$lib/Header.svelte';
 
   let user = $state<{ name: string }>();
 </script>
