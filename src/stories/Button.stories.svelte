@@ -30,6 +30,10 @@
 			size: {
 				control: { type: 'radio' },
 				options: ['large', 'standard', 'small']
+			},
+			href: { control: 'text' },
+			newTab: {
+				control: 'boolean'
 			}
 		},
 		args: {
@@ -50,3 +54,8 @@
 <Story name="Large" args={{ size: 'large' }} />
 
 <Story name="Small" args={{ size: 'small' }} />
+
+<Story
+	name="Link"
+	args={{ size: 'large', disabled: true, href: '/signup', newTab: true, label: 'Link' }}
+/>
