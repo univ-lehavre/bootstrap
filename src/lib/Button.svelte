@@ -15,10 +15,12 @@
 		outline?: boolean;
 		disabled?: boolean;
 		size?: 'large' | 'small' | 'standard';
+		href?: string;
+		newTab?: boolean;
 		onclick?: () => void;
 	}
 
-	const { label, onclick, variant, icon, outline, disabled, size }: Props = $props();
+	const { label, onclick, variant, icon, outline, disabled, size, href, newTab }: Props = $props();
 
 	const btnClass = $derived(`btn${outline ? '-outline' : ''}-${variant}`);
 	const btnSize = $derived(size === 'large' ? 'btn-lg' : size === 'small' ? 'btn-sm' : '');
@@ -31,6 +33,17 @@
 	{label}
 {/snippet}
 
-<button {onclick} type="button" class="btn {btnClass} {btnSize}" {disabled}>
-	{@render content()}
-</button>
+{#if href}
+	<a
+		{href}
+		class="btn {btnClass} {btnSize} {disabled ? 'disabled' : ''}"
+		target={newTab ? '_blank' : '_self'}
+		role="button"
+	>
+		{@render content()}
+	</a>
+{:else}
+	<button {onclick} type="button" class="btn {btnClass} {btnSize}" {disabled}>
+		{@render content()}
+	</button>
+{/if}
