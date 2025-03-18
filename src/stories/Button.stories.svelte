@@ -49,6 +49,8 @@
 </script>
 
 <!-- More on writing stories with args: https://storybook.js.org/docs/writing-stories/args -->
+<Story name="Primary" args={{ label: 'Primary' }} />
+
 <Story name="Success" args={{ variant: 'success', label: 'Success' }} />
 
 <Story name="Large" args={{ size: 'large' }} />

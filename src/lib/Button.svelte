@@ -1,7 +1,7 @@
 <script lang="ts">
 	interface Props {
 		label: string;
-		variant:
+		variant?:
 			| 'primary'
 			| 'secondary'
 			| 'success'
@@ -22,7 +22,7 @@
 
 	const { label, onclick, variant, icon, outline, disabled, size, href, newTab }: Props = $props();
 
-	const btnClass = $derived(`btn${outline ? '-outline' : ''}-${variant}`);
+	const btnClass = $derived(`btn${outline ? '-outline' : ''}-${variant ? variant : 'primary'}`);
 	const btnSize = $derived(size === 'large' ? 'btn-lg' : size === 'small' ? 'btn-sm' : '');
 </script>
 
