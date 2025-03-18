@@ -1,5 +1,11 @@
 # @univ-lehavre/bootstrap
 
+## 1.1.0
+
+### Minor Changes
+
+- 2dd1a0d: Button can now be a link
+
 ## 1.0.1
 
 ### Patch Changes
