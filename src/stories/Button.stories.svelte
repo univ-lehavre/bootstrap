@@ -12,14 +12,24 @@
 			label: { control: 'text' },
 			variant: {
 				control: { type: 'select' },
-				options: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']
+				options: [
+					'primary',
+					'secondary',
+					'success',
+					'danger',
+					'warning',
+					'info',
+					'light',
+					'dark',
+					'link'
+				]
 			},
 			icon: { control: 'text' },
 			outline: { control: 'boolean' },
 			disabled: { control: 'boolean' },
 			size: {
 				control: { type: 'radio' },
-				options: ['large', "standard", 'small']
+				options: ['large', 'standard', 'small']
 			}
 		},
 		args: {
@@ -28,14 +38,14 @@
 			icon: 'arrow-up-circle-fill',
 			outline: false,
 			disabled: false,
-			size: "standard",
-			onclick: fn(),
+			size: 'standard',
+			onclick: fn()
 		}
 	});
 </script>
 
 <!-- More on writing stories with args: https://storybook.js.org/docs/writing-stories/args -->
-<Story name="Success" args={{ variant: "success", label: "Success" }} />
+<Story name="Success" args={{ variant: 'success', label: 'Success' }} />
 
 <Story name="Large" args={{ size: 'large' }} />
 
