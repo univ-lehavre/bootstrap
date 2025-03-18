@@ -1,29 +1,38 @@
 <script lang="ts">
-	import '$lib/button.css';
-
 	interface Props {
-		/** Is this the principal call to action on the page? */
-		primary?: boolean;
-		/** What background color to use */
-		backgroundColor?: string;
-		/** How large should the button be? */
-		size?: 'small' | 'medium' | 'large';
-		/** Button contents */
 		label: string;
-		/** The onclick event handler */
-		onClick?: () => void;
+		variant:
+			| 'primary'
+			| 'secondary'
+			| 'success'
+			| 'danger'
+			| 'warning'
+			| 'info'
+			| 'light'
+			| 'dark'
+			| 'link';
+		icon?: string;
+		outline?: boolean;
+		disabled?: boolean;
+		size: 'large' | 'small' | 'standard';
+		onclick?: () => void;
 	}
 
-	const { primary = false, backgroundColor, size = 'medium', label, onClick }: Props = $props();
+	const { label, onclick, variant, icon, outline, disabled, size }: Props = $props();
 </script>
 
 <button
+	{onclick}
 	type="button"
-	class={['storybook-button', `storybook-button--${size}`].join(' ')}
-	class:storybook-button--primary={primary}
-	class:storybook-button--secondary={!primary}
-	style:background-color={backgroundColor}
-	onclick={onClick}
+	class="btn btn{outline ? '-outline' : ''}-{variant} {size === 'large'
+		? 'btn-lg'
+		: size === 'small'
+			? 'btn-sm'
+			: ''}"
+	{disabled}
 >
+	{#if icon}
+		<i class="bi bi-{icon} me-1"></i>
+	{/if}
 	{label}
 </button>

@@ -1,5 +1,11 @@
 # @univ-lehavre/bootstrap
 
+## 1.0.0
+
+### Major Changes
+
+- 78dc72a: First component
+
 ## 0.0.4
 
 ### Patch Changes

@@ -6,7 +6,8 @@ const config: StorybookConfig = {
 		'@storybook/addon-essentials',
 		'@storybook/addon-svelte-csf',
 		'@chromatic-com/storybook',
-		'@storybook/experimental-addon-test'
+		'@storybook/experimental-addon-test',
+		'@storybook/addon-themes'
 	],
 	framework: {
 		name: '@storybook/sveltekit',

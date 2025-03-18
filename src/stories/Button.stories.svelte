@@ -9,23 +9,44 @@
 		component: Button,
 		tags: ['autodocs'],
 		argTypes: {
-			backgroundColor: { control: 'color' },
-			size: {
+			label: { control: 'text' },
+			variant: {
 				control: { type: 'select' },
-				options: ['small', 'medium', 'large']
+				options: [
+					'primary',
+					'secondary',
+					'success',
+					'danger',
+					'warning',
+					'info',
+					'light',
+					'dark',
+					'link'
+				]
+			},
+			icon: { control: 'text' },
+			outline: { control: 'boolean' },
+			disabled: { control: 'boolean' },
+			size: {
+				control: { type: 'radio' },
+				options: ['large', 'standard', 'small']
 			}
 		},
 		args: {
-			onClick: fn()
+			label: 'Button',
+			variant: 'primary',
+			icon: 'arrow-up-circle-fill',
+			outline: false,
+			disabled: false,
+			size: 'standard',
+			onclick: fn()
 		}
 	});
 </script>
 
 <!-- More on writing stories with args: https://storybook.js.org/docs/writing-stories/args -->
-<Story name="Primary" args={{ primary: true, label: 'Button' }} />
+<Story name="Success" args={{ variant: 'success', label: 'Success' }} />
 
-<Story name="Secondary" args={{ label: 'Button' }} />
+<Story name="Large" args={{ size: 'large' }} />
 
-<Story name="Large" args={{ size: 'large', label: 'Button' }} />
-
-<Story name="Small" args={{ size: 'small', label: 'Button' }} />
+<Story name="Small" args={{ size: 'small' }} />
