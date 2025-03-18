@@ -56,6 +56,7 @@
 		"@playwright/test": "^1.51.1",
 		"@storybook/addon-essentials": "^8.6.7",
 		"@storybook/addon-svelte-csf": "5.0.0-next.28",
+		"@storybook/addon-themes": "^8.6.7",
 		"@storybook/blocks": "^8.6.7",
 		"@storybook/experimental-addon-test": "^8.6.7",
 		"@storybook/svelte": "^8.6.7",
@@ -94,5 +95,9 @@
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"bootstrap": "^5.3.3",
+		"bootstrap-icons": "^1.11.3"
 	}
 }
