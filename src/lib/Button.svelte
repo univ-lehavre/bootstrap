@@ -14,25 +14,23 @@
 		icon?: string;
 		outline?: boolean;
 		disabled?: boolean;
-		size: 'large' | 'small' | 'standard';
+		size?: 'large' | 'small' | 'standard';
 		onclick?: () => void;
 	}
 
 	const { label, onclick, variant, icon, outline, disabled, size }: Props = $props();
+
+	const btnClass = $derived(`btn${outline ? '-outline' : ''}-${variant}`);
+	const btnSize = $derived(size === 'large' ? 'btn-lg' : size === 'small' ? 'btn-sm' : '');
 </script>
 
-<button
-	{onclick}
-	type="button"
-	class="btn btn{outline ? '-outline' : ''}-{variant} {size === 'large'
-		? 'btn-lg'
-		: size === 'small'
-			? 'btn-sm'
-			: ''}"
-	{disabled}
->
+{#snippet content()}
 	{#if icon}
 		<i class="bi bi-{icon} me-1"></i>
 	{/if}
 	{label}
+{/snippet}
+
+<button {onclick} type="button" class="btn {btnClass} {btnSize}" {disabled}>
+	{@render content()}
 </button>
