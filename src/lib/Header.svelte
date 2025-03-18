@@ -1,6 +1,6 @@
 <script lang="ts">
-  import './header.css';
-  import Button from './Button.svelte';
+  import '$lib/header.css';
+  import Button from '$lib/Button.svelte';
 
   interface Props {
     user?: { name: string };
