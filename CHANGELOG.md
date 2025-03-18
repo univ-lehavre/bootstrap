@@ -1,5 +1,11 @@
 # @univ-lehavre/bootstrap
 
+## 1.0.1
+
+### Patch Changes
+
+- b8a5104: Size parameter is now optional
+
 ## 1.0.0
 
 ### Major Changes
