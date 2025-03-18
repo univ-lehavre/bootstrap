@@ -1,5 +1,11 @@
 # @univ-lehavre/bootstrap
 
+## 1.2.0
+
+### Minor Changes
+
+- 794b459: Button has now a default variant
+
 ## 1.1.0
 
 ### Minor Changes
