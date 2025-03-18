@@ -43,7 +43,7 @@
 		{@render content()}
 	</a>
 {:else}
-	<button {onclick} type="button" class="btn {btnClass} {btnSize}" {disabled}>
+	<button {onclick} class="btn {btnClass} {btnSize}" {disabled}>
 		{@render content()}
 	</button>
 {/if}
