@@ -2,6 +2,14 @@
 	"name": "@univ-lehavre/bootstrap",
 	"version": "0.0.1",
 	"license": "UNLICENSED",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/univ-lehavre/bootstrap.git"
+	},
+	"bugs": {
+		"url": "https://github.com/univ-lehavre/bootstrap/issues"
+	},
+	"homepage": "https://github.com/univ-lehavre/bootstrap#readme",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
