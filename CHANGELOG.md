@@ -1,5 +1,11 @@
 # @univ-lehavre/bootstrap
 
+## 1.2.1
+
+### Patch Changes
+
+- c2d2eb9: Button can now submit
+
 ## 1.2.0
 
 ### Minor Changes
